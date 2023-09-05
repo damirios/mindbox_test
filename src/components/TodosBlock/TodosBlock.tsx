@@ -69,7 +69,7 @@ export function TodosBlock({ list }: { list: TTask[] }) {
                 />
                 {value.trim() !== "" && (
                     <button onClick={handleSubmit} className={s.todos_add_button}>
-                        add task
+                        add
                     </button>
                 )}
             </div>

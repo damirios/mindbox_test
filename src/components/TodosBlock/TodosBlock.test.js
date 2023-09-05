@@ -16,13 +16,13 @@ describe("добавление задания", () => {
         const input = screen.queryByTestId("input_test");
 
         expect(input).not.toBeNull();
-        expect(screen.queryByText("add task")).toBeNull();
+        expect(screen.queryByText("add")).toBeNull();
 
         fireEvent.input(input, {
             target: {value: "new_task_123"}
         });
 
-        const submitButton = screen.getByText("add task");
+        const submitButton = screen.getByText("add");
         expect(submitButton).toBeInTheDocument();
         fireEvent.click(submitButton);
         expect(screen.getByText("new_task_123")).toBeInTheDocument();
