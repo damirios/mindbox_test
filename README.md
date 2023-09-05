@@ -13,6 +13,7 @@ npm i
 npm start
 ```
 Приложение доступно на http://localhost:3000
+
 4)* Запуск тестов:
 ```
 npm run test
