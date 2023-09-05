@@ -1,0 +1,29 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 12px;
+}
+
+.menu_tasks_count {
+    font-size: 14px;
+    color: #828282;
+}
+
+.menu_filter_buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.menu_button {
+    font-size: 14px;
+    padding: 3px 5px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #828282;
+}
+.menu_button_active {
+    border: 1px solid rgb(229, 100, 30);
+}

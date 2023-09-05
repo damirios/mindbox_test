@@ -1,0 +1,37 @@
+.todos_block {
+    background-color: #fff;
+    box-shadow: 0 0 3px 3px rgba(79, 79, 79, 0.266);
+    min-width: 500px;
+    border-radius: 5px;
+}
+
+.todos_input_box {
+    border-bottom: 1px solid rgba(117, 117, 117, 0.553);
+    display: flex;
+    column-gap: 10px;
+    padding: 13px 8px;
+}
+
+.todos_input {
+    width: 100%;
+}
+
+.todos_input::placeholder {
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.todos_input_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.todos_add_button {
+    font-size: 14px;
+    padding: 3px 5px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #828282;
+    border: 1px solid #aaa;
+}
