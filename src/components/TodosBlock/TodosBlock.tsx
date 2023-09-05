@@ -7,14 +7,8 @@ import s from "./styles.module.css";
 import inputIcon from "./input_icon.svg";
 import { TodosMenu } from "../TodosMenu/TodosMenu";
 
-const mockData: TTask[] = [
-    { text: "тестовое задание", cleared: false, completed: false, id: "1" },
-    { text: "прекрасный код", cleared: false, completed: true, id: "2" },
-    { text: "покрытие тестами", cleared: false, completed: false, id: "3" },
-];
-
-export function TodosBlock() {
-    const [tasks, setTasks] = useState<TTask[]>(mockData);
+export function TodosBlock({ list }: { list: TTask[] }) {
+    const [tasks, setTasks] = useState<TTask[]>(list);
     const [tasksFilter, setTasksFilter] = useState<TFilter>("all");
     const [value, setValue] = useState<string>("");
 
@@ -37,7 +31,7 @@ export function TodosBlock() {
     }
 
     function handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-        const lastId = tasks[tasks.length - 1].id;
+        const lastId = tasks[tasks.length - 1]?.id || 0;
         setTasks([...tasks, { text: value, id: (+lastId + 1).toString(), completed: false, cleared: false }]);
         setValue("");
     }
@@ -67,6 +61,7 @@ export function TodosBlock() {
             <div className={s.todos_input_box}>
                 <img className={s.todos_input_icon} src={inputIcon} alt="arrow_down" />
                 <input
+                    data-testid="input_test"
                     value={value}
                     onChange={handleInputChange}
                     className={s.todos_input}
@@ -74,7 +69,7 @@ export function TodosBlock() {
                 />
                 {value.trim() !== "" && (
                     <button onClick={handleSubmit} className={s.todos_add_button}>
-                        add
+                        add task
                     </button>
                 )}
             </div>

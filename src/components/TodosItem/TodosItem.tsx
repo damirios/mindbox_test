@@ -16,6 +16,7 @@ export function TodosItem({ task, handleItemClick }: ITodosItemProps) {
 
     return (
         <li
+            data-testid="li_test"
             onClick={handleItemClick}
             id={`task_${task.id}`}
             className={`${s.todos_item} ${task.completed ? s.todos_item_completed : ""}`}
