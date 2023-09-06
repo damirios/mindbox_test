@@ -20,4 +20,4 @@ npm run test
 ```
 
 
-### [Live Demo](https://damirios.github.io/mindbox_test/)
+### [Live Demo](https://damirios.github.io/todo_list/)
